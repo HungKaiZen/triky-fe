@@ -1,4 +1,4 @@
-const baseURL  = "https://backend-serive-v1-1.onrender.com";
+const baseURL  = "https://backend-serive-v1.onrender.com";
 document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 

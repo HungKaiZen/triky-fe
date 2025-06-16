@@ -1,4 +1,4 @@
-const baseURL  = "https://backend-serive-v1-1.onrender.com";
+const baseURL  = "https://backend-serive-v1.onrender.com";
 document.addEventListener("DOMContentLoaded", function() {
     const token = localStorage.getItem("token");
     const userId = localStorage.getItem("userId");
