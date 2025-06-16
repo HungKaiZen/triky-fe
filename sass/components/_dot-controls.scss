@@ -1,0 +1,16 @@
+.dot-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        width: 24px;
+        height: 4px;
+        border-radius: 2px;
+        background: #e0eae5;
+
+        &.active {
+            background: var(--bg-color-3);
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@use "../abstracts";
+// Category
+.category {
+    padding: 20px 0;
+    background: #ffcd00;
+
+    &__row {
+        align-items: center;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .form__group {
+        height: 50px;
+
+        @include abstracts.screen(xxl) {
+            width: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+
+        @include abstracts.screen(lg) {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        &:first-child a {
+            color: #ff5f1a;
+        }
+    }
+
+    &__link {
+        color: #032e32;
+        font-size: 1.8rem;
+        line-height: 1.66;
+
+        @include abstracts.screen(xxl) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+// Popular
+.popular {
+    margin: 40px 0;
+    padding: 60px 0;
+
+    &__heading {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__courses-block {
+        margin-top: 70px;
+    }
+
+    &__btn-read-all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 55px;
+    }
+}

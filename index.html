@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circuit</title>
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./assets/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    <!-- Animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Script -->
+    <script src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <main id="home-page">
+      <header id="header" class="header"></header>
+      <script>
+        load("#header", "./templates/header.html");
+      </script>
+
+      <!-- Offer -->
+      <article class="offer">
+        <ul class="offer__list">
+          <li class="offer__item">
+            <a href="#!" class="offer__link">
+              Giảm giá 15% cho tất cả các khóa học của chúng tôi
+            </a>
+          </li>
+          <li class="offer__item">
+            <a href="#!" class="offer__link">
+              Giảm giá 15% cho tất cả các khóa học của chúng tôi
+            </a>
+          </li>
+          <li class="offer__item">
+            <a href="#!" class="offer__link">
+              Giảm giá 15% cho tất cả các khóa học của chúng tôi
+            </a>
+          </li>
+          <li class="offer__item">
+            <a href="#!" class="offer__link">
+              Giảm giá 15% cho tất cả các khóa học của chúng tôi
+            </a>
+          </li>
+        </ul>
+      </article>
+
+      <!-- Hero -->
+      <section class="hero hero__home">
+        <div class="container">
+          <div class="row hero__row row-cols-2 row-cols-md-1 gy-3">
+            <div class="col">
+              <div class="hero__left">
+                <h1 class="heading hero__heading">
+                  Website Học Tiếng Nhật Hàng Đầu Việt Nam
+                </h1>
+                <p class="section__desc hero__desc">
+                  mailannihongo cung cấp các khóa học tiếng nhật từ cơ bản tới
+                  nâng cao với đội ngũ giảng dậy chất lượng không những học viên
+                  được học tiếng nhật một cách dễ hiểu nhất và còn có thể được
+                  học thêm về văn hóa con người nhật bản và những kinh nghiệm
+                  sâu sắc khi sinh sống tại nhật bản.
+                </p>
+                <form action="./search-result.html" class="form hero__form">
+                  <div class="form__row form__row--small">
+                    <div class="form__group hero__form-group">
+                      <div class="form__group-horizontal">
+                        <img
+                          src="./assets/icon/search.svg"
+                          alt=""
+                          class="form__group-icon"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Tìm kiếm khóa học"
+                          class="form__group-input"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn form__submit-btn hero__form-btn"
+                    >
+                      Khám phá ngay
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col">
+              <div class="hero__right">
+                <img
+                  src="./assets/icon/ellipse.svg"
+                  alt=""
+                  class="hero__right-decor-img"
+                />
+                <a href="./course-detail.htmlcourse-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-1.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img
+                          src="./assets/icon/arrow-right.svg"
+                          alt=""
+                          class="course-card__detail-icon"
+                        />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">Web Design</h3>
+                        <p class="course-card__desc">Basic Web Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>4.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(5325)</span>
+                        </div>
+                      </div>
+
+                      <span class="course-card__price"> $ 149 </span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits -->
+      <section class="benefis">
+        <div class="container">
+          <div class="benefis__inner">
+            <div class="benefis__text">
+              <h3 class="benefis__title">Benefis</h3>
+              <h2 class="benefis__heading">
+                Simple and effective accredited Tech training courses
+              </h2>
+            </div>
+            <div class="benefis__right">
+              <div class="benefis__media">
+                <img
+                  src="./assets/img/benefits/benefits-img.png"
+                  alt=""
+                  class="benefis__media-img"
+                />
+                <button class="play-btn benefis__media-btn">
+                  <img
+                    src="./assets/icon/play.svg"
+                    alt=""
+                    class="benefis__media-btn-icon"
+                  />
+                </button>
+              </div>
+              <div class="benefis__list">
+                <div class="benefis__item">
+                  <img
+                    src="./assets/img/benefits/benefits-icon-1.svg"
+                    alt=""
+                    class="benefis__item-icon"
+                  />
+                  <p class="benefis__item-desc">Short & Accredited Courses</p>
+                </div>
+                <div class="benefis__item">
+                  <img
+                    src="./assets/img/benefits/benefits-icon-2.svg"
+                    alt=""
+                    class="benefis__item-icon"
+                  />
+                  <p class="benefis__item-desc">Student Friendly Classroom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- About -->
+        <section class="about">
+          <h2 class="section__heading about__heading">
+            Support to achieve your career goals
+          </h2>
+          <p class="section__desc about__desc">
+            Circuit is flexible and affordable and offers you exceptional
+            support to achieve your career goals. Circuit is a Global training
+            provider based across the UK that specialises.
+          </p>
+          <button class="btn about__btn">Learn More</button>
+          <div class="about__media">
+            <div class="row">
+              <div class="col-7">
+                <img
+                  src="./assets/img/about/about-img-1.png"
+                  alt=""
+                  class="about__media-img"
+                />
+              </div>
+              <div class="col-5">
+                <img
+                  src="./assets/img/courses-img/courses-img-1.png"
+                  alt=""
+                  class="about__media-img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Services -->
+        <section class="services">
+          <h2 class="section__heading services__heading">
+            Flexible and affordable system for you
+          </h2>
+          <div class="services__list">
+            <div class="row row-cols-3 row-cols-md-1 gy-lg-3 gy-md-2">
+              <div class="col">
+                <a href="#!">
+                  <article class="services__item">
+                    <img
+                      src="./assets/img/services/services-img-1.svg"
+                      alt=""
+                      class="services__item-thumb"
+                    />
+                    <h3 class="services__item-title">Short Course</h3>
+                    <p class="services__item-desc">
+                      Ranging from 1 -14 Days or up to 12 Months. Providing the
+                      best courses all over the world
+                    </p>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="#!">
+                  <article class="services__item">
+                    <img
+                      src="./assets/img/services/services-img-2.svg"
+                      alt=""
+                      class="services__item-thumb"
+                    />
+                    <h3 class="services__item-title">Friendly Classroom</h3>
+                    <p class="services__item-desc">
+                      Nationwide Locations running monthly whether Face2face or
+                      Virtual Live Classroom
+                    </p>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="#!">
+                  <article class="services__item">
+                    <img
+                      src="./assets/img/services/services-img-3.svg"
+                      alt=""
+                      class="services__item-thumb"
+                    />
+                    <h3 class="services__item-title">Online Course</h3>
+                    <p class="services__item-desc">
+                      Self-paced, Study from anywhere E-learning Video courses.
+                      Providing the best courses all over the world
+                    </p>
+                  </article>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Courses -->
+      <section class="courses">
+        <div class="container">
+          <h2 class="section__heading courses__heading">
+            Course Subjects to suit you
+          </h2>
+          <p class="section__desc courses__desc">
+            Circuit is flexible and affordable and offers you exceptional
+            support to achieve your career goals.
+          </p>
+          <div class="courses-block">
+            <div
+              class="row row-cols-3 row-cols-lg-2 row-cols-md-1 gy-3 gy-md-2"
+            >
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-2.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">Web Design</h3>
+                        <p class="course-card__desc">Basic Web Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>4.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(5325)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">149</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-3.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">Web Design</h3>
+                        <p class="course-card__desc">Basic Web Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>4.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(4321)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">134</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-4.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">UI/UX</h3>
+                        <p class="course-card__desc">Basic UI/UX Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>3.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(3325)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">109</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-5.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">Web Design</h3>
+                        <p class="course-card__desc">Basic Web Design 2023</p>
+                        <div class="course-card__rating">
+                          <span>4.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(6320)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">180</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-6.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">UI/UX</h3>
+                        <p class="course-card__desc">Basic UI/UX Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>3.5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(5325)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">120</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+              <div class="col">
+                <a href="./course-detail.html">
+                  <article class="course-card">
+                    <div class="course-card__wrap-thumb">
+                      <img
+                        src="./assets/img/courses-img/courses-img-1.png"
+                        alt=""
+                        class="course-card__thumb"
+                      />
+                      <a href="#!" class="course-card__detail">
+                        <img src="./assets/icon/arrow-right.svg" alt="" />
+                      </a>
+                    </div>
+                    <div class="course-card__info">
+                      <div>
+                        <h3 class="course-card__title">Web Design</h3>
+                        <p class="course-card__desc">Basic Web Design 2022</p>
+                        <div class="course-card__rating">
+                          <span>5</span>
+                          <img src="./assets/icon/star.svg" alt="" />
+                          <span>(8432)</span>
+                        </div>
+                      </div>
+                      <span class="course-card__price">231</span>
+                    </div>
+                  </article>
+                </a>
+              </div>
+            </div>
+          </div>
+          <button class="btn courses__btn">All Course</button>
+        </div>
+      </section>
+
+      <div class="container">
+        <!-- Features -->
+        <div class="features">
+          <div class="row gy-3">
+            <div class="col-5 col-lg-6 col-md-12">
+              <div class="features__media">
+                <img
+                  src="./assets/img/features/features-img.png"
+                  alt=""
+                  class="features__media-img"
+                />
+                <button class="play-btn features__media-btn">
+                  <img src="./assets/icon/play.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="col-6 col-lg-6 col-md-12 offset-1 offset-lg-0">
+              <div class="features__content">
+                <h2 class="section__heading features__heading">
+                  Benefits of learning with circuit platfrom
+                </h2>
+                <p class="section__desc features__desc">
+                  Circuit is flexible and affordable and offers you exceptional
+                  support to achieve your career goals. Circuit is a Global
+                  training provider based across the UK that specialises.
+                </p>
+                <ul class="features__list">
+                  <li class="features__item">More affordable cost</li>
+                  <li class="features__item">
+                    The insight gainded in much wider
+                  </li>
+                  <li class="features__item">More flexible study time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback -->
+        <section class="feedback">
+          <h2 class="section__heading">What students are saying</h2>
+          <p class="section__desc feedback__desc">
+            Circuit is flexible and affordable and offers you exceptional
+            support to achieve your career goals. Circuit is a Global training
+            provider based across the UK that specialises.
+          </p>
+          <div class="feedback__list">
+            <div class="row row-cols-3 row-cols-lg-1 gy-3 gy-md-2">
+              <!-- user 1 -->
+              <div class="col">
+                <article class="feedback__item">
+                  <h3 class="feedback__item-title">
+                    Great platform for learning online I have ever found!
+                  </h3>
+                  <blockquote class="feedback__item-comment">
+                    "Circuit has helped me expand my knowledge through several
+                    important courses that are extremely impactful and helpful
+                    for my career. For the first time, finishing my degree
+                    seemed realistic. It was online with a flexible schedule. It
+                    felt like this program was made for my situation. Really a
+                    wonderful platform”
+                  </blockquote>
+                  <a href="#!" class="feedback__item-comment-text"></a>
+                  <div class="user-info">
+                    <div class="user-info__left">
+                      <img
+                        src="./assets/img/feedback/avatar-1.png"
+                        alt=""
+                        class="user-info__avatar"
+                      />
+                    </div>
+                    <div class="user-info__right">
+                      <h4 class="user-info__name">Tim Southee</h4>
+                      <div class="user-info__rating">
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- user 2 -->
+              <div class="col">
+                <article class="feedback__item active">
+                  <h3 class="feedback__item-title">
+                    Great platform for learning online I have ever found!
+                  </h3>
+                  <blockquote class="feedback__item-comment">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perferendis eveniet eius quidem suscipit illum fuga sint
+                    quam labore dolores, atque repellendus? Esse vel corporis
+                    mollitia ipsa nobis necessitatibus fuga quos?”
+                  </blockquote>
+                  <a href="#!" class="feedback__item-comment-text"></a>
+                  <div class="user-info">
+                    <div class="user-info__left">
+                      <img
+                        src="./assets/img/feedback/avatar-2.png"
+                        alt=""
+                        class="user-info__avatar"
+                      />
+                    </div>
+                    <div class="user-info__right">
+                      <h4 class="user-info__name">Trent Boult</h4>
+                      <div class="user-info__rating">
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <!-- user 3 -->
+              <div class="col">
+                <article class="feedback__item">
+                  <h3 class="feedback__item-title">
+                    Great platform for learning online I have ever found!
+                  </h3>
+                  <blockquote class="feedback__item-comment">
+                    "Circuit has helped me expand my knowledge through several
+                    important courses that are extremely impactful and helpful
+                    for my career. For the first time, finishing my degree
+                    seemed realistic. It was online with a flexible schedule. It
+                    felt like this program was made for my situation. Really a
+                    wonderful platform”
+                  </blockquote>
+                  <a href="#!" class="feedback__item-comment-text"></a>
+                  <div class="user-info">
+                    <div class="user-info__left">
+                      <img
+                        src="./assets/img/feedback/avatar-3.png"
+                        alt=""
+                        class="user-info__avatar"
+                      />
+                    </div>
+                    <div class="user-info__right">
+                      <h4 class="user-info__name">Neil Wagner</h4>
+                      <div class="user-info__rating">
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                        <img src="./assets/icon/star.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="feedback__control">
+            <div class="dot-controls">
+              <span></span>
+              <span class="active"></span>
+              <span></span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta__innner">
+            <div>
+              <img
+                src="./assets/img/cta/decoration/star-1.svg"
+                alt=""
+                class="cta__decor"
+              />
+              <img
+                src="./assets/img/cta/decoration/star-2.svg"
+                alt=""
+                class="cta__decor"
+              />
+              <img
+                src="./assets/img/cta/decoration/star-1.svg"
+                alt=""
+                class="cta__decor"
+              />
+              <img
+                src="./assets/img/cta/decoration/star-2.svg"
+                alt=""
+                class="cta__decor"
+              />
+            </div>
+            <div>
+              <img
+                src="./assets/img/cta/avatar/avatar-1.png"
+                alt=""
+                class="cta__avatar"
+              />
+              <img
+                src="./assets/img/cta/avatar/avatar-2.png"
+                alt=""
+                class="cta__avatar"
+              />
+              <img
+                src="./assets/img/cta/avatar/avatar-3.png"
+                alt=""
+                class="cta__avatar"
+              />
+              <img
+                src="./assets/img/cta/avatar/avatar-4.png"
+                alt=""
+                class="cta__avatar"
+              />
+              <img
+                src="./assets/img/cta/avatar/avatar-5.png"
+                alt=""
+                class="cta__avatar"
+              />
+              <img
+                src="./assets/img/cta/avatar/avatar-6.png"
+                alt=""
+                class="cta__avatar"
+              />
+            </div>
+            <h2 class="section__heading cta__heading">
+              More that 1M+ successful students
+            </h2>
+            <p class="section__desc cta__desc">
+              Circuit is flexible and affordable and offers you exceptional
+              support to achieve your career goals.
+            </p>
+            <button class="btn cta__btn">Get Started</button>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" class="footer"></footer>
+      <script>
+        load("#footer", "./templates/footer.html");
+      </script>
+    </main>
+
+    <script src="./assets/js/slider.js"></script>
+  </body>
+</html>

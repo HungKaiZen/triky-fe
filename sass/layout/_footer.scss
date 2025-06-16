@@ -1,0 +1,219 @@
+@use "../abstracts";
+.footer {
+    background: var(--bg-color-1);
+
+    &__inner {
+        padding-top: 92px;
+
+        @include abstracts.screen(lg) {
+            padding-top: 60px;
+        }
+    }
+
+    &__top {
+        padding-bottom: 48px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 30px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: auto auto auto;
+            gap: 130px;
+        }
+
+        @include abstracts.screen(md) {
+            gap: 100px;
+        }
+
+        @include abstracts.screen(sm) {
+            gap: 30px;
+        }
+    }
+
+    &__column {
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+            @include abstracts.screen(sm) {
+                grid-column: 1/3;
+            }
+        }
+
+        &:last-child {
+            @include abstracts.screen(lg) {
+                grid-column: 1/3;
+            }
+
+            @include abstracts.screen(sm) {
+                grid-column: 1/4;
+            }
+        }
+    }
+
+    &__title {
+        color: var(--primary-color);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    &__list {
+        margin-top: 24px;
+    }
+
+    &__item {
+        &:first-child a {
+            padding-top: 0;
+        }
+
+        &:last-child a {
+            padding-bottom: 0;
+        }
+    }
+
+    &__link {
+        padding: 6px 0;
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        line-height: 1.75;
+
+        &:hover {
+            color: rgb(44, 126, 220);
+        }
+    }
+
+    &__form {
+        margin-top: 24px;
+
+        .form__row {
+            align-items: flex-start;
+        }
+
+        .form__group {
+            width: min(258px, 100%);
+            height: 56px;
+            border-radius: 4px;
+            border: 1px solid #032e32;
+            background: transparent;
+
+            &-horizontal {
+                height: 100%;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+
+            @include abstracts.screen(md) {
+                width: 100%;
+            }
+
+            &-input {
+                font-size: 1.6rem;
+                line-height: 1.75;
+
+                &::placeholder {
+                    color: var(--primary-color);
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        &-submit-btn {
+            width: min(129px, 100%);
+            height: 56px;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            @include abstracts.screen(lg) {
+                width: 100%;
+            }
+
+            @include abstracts.screen(md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        gap: 30px;
+        margin-top: 24px;
+
+        &-label {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            line-height: 1.75;
+        }
+
+        &-value {
+            margin-top: 16px;
+            color: var(--primary-color);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.5;
+
+            @include abstracts.screen(lg) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+        border-top: 1px solid #d9d9d9;
+
+        @include abstracts.screen(lg) {
+            row-gap: 30px;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.social {
+    margin-top: 24px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--primary-color);
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+}
+
+.payments {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.copyright {
+    color: #5d6c6c;
+    font-size: 1.6rem;
+    line-height: 1.75;
+
+    @include abstracts.screen(md) {
+        width: 100%;
+        text-align: center;
+    }
+}

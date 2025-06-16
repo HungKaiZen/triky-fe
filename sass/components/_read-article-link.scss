@@ -1,0 +1,18 @@
+@use "../abstracts";
+.read-article__link {
+    display: block;
+    margin-top: 20px;
+    color: #ff5f1a;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.66;
+    text-decoration: underline;
+
+    &--white {
+        color: #fff;
+
+        @include abstracts.screen(lg) {
+            color: #ff5f1a;
+        }
+    }
+}

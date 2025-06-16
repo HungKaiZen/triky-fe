@@ -1,0 +1,188 @@
+@use "../abstracts";
+.skills {
+    margin: 40px 0;
+    padding: 60px 0;
+
+    @include abstracts.screen(lg) {
+        margin: 20px 0;
+        padding: 40px 0;
+    }
+
+    .frame__square {
+        &:first-child {
+            background: #ffcd00;
+        }
+
+        &:nth-child(2) {
+            margin-top: 30px;
+            background: #b5ed3d;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
+        }
+
+        &:nth-child(3) {
+            background: #fda4a9;
+        }
+
+        &:last-child {
+            margin-top: 30px;
+            background: #e8b88f;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__name {
+        color: #032e32;
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1.31;
+    }
+
+    &__desc {
+        margin-top: 20px;
+    }
+}
+
+// Analysis
+.analysis {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 60px 30px;
+    background: var(--primary-color);
+
+    @include abstracts.screen(lg) {
+        margin: 20px 0;
+        padding: 40px 20px;
+    }
+
+    &__heading,
+    &__desc {
+        color: #fff;
+    }
+
+    &__desc {
+        max-width: 570px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        gap: 70px;
+        margin-top: 70px;
+        text-align: center;
+
+        @include abstracts.screen(lg) {
+            gap: 30px;
+        }
+
+        @include abstracts.screen(md) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        @include abstracts.screen(md) {
+            width: calc(50% - 30px);
+        }
+
+        &-title {
+            color: #fff;
+            font-size: 4.2rem;
+            font-weight: 800;
+            line-height: 1.24;
+
+            @include abstracts.screen(lg) {
+                font-size: 3.2rem;
+            }
+
+            @include abstracts.screen(md) {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-desc {
+            color: #c5d8d9;
+            font-size: 1.8rem;
+            line-height: 1.66;
+
+            @include abstracts.screen(lg) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+// Paetner
+.partner {
+    margin: 40px 0;
+    padding: 60px 0;
+
+    @include abstracts.screen(lg) {
+        margin: 20px 0;
+        padding: 40px 0;
+    }
+
+    .frame__square {
+        padding: 20px;
+        &:first-child {
+            background: #0056d2;
+        }
+
+        &:nth-child(2) {
+            margin-top: 30px;
+            background: #b052f2;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
+        }
+
+        &:nth-child(3) {
+            background: #012333;
+        }
+
+        &:last-child {
+            margin-top: 30px;
+            background: #02b3e4;
+
+            @include abstracts.screen(md) {
+                margin-top: 20px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__desc {
+        margin-top: 20px;
+    }
+}
+
+// Learning
+.learning {
+    margin: 20px 0;
+    padding: 40px 0;
+
+    @include abstracts.screen(lg) {
+        margin: 20px 0;
+        padding: 20px 0;
+    }
+
+    .frame__square {
+        &:nth-child(2) {
+            position: relative;
+            top: 50%;
+        }
+    }
+}

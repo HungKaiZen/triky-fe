@@ -1,0 +1,60 @@
+.courses-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 60px 0;
+}
+
+.courses-slider__content {
+  position: relative;
+  width: inherit;
+  overflow: hidden;
+}
+
+.courses-slider__main {
+  position: relative;
+  display: flex;
+  width: inherit;
+  transition: transform 0.35s linear;
+}
+
+.courses-slider__item {
+  width: inherit;
+  flex: 1 0 100%;
+}
+
+.courses-slider__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.nextBtn,
+.prevBtn {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 1px 1px 8px rgba($color: #000000, $alpha: 0.1);
+
+  img {
+    width: 12px;
+  }
+}
+
+.nextBtn {
+  right: 0;
+  translate: 50%;
+}
+
+.prevBtn {
+  left: 0;
+  translate: -50%;
+}

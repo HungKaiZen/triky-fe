@@ -1,0 +1,24 @@
+@use "../abstracts";
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    @include abstracts.screen(md) {
+        order: 2;
+    }
+
+    .icon-logo {
+        filter: var(--icon-logo);
+    }
+
+    &__text {
+        color: #032e32;
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        &--white {
+            color: #fff;
+        }
+    }
+}

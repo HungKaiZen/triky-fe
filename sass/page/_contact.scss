@@ -1,0 +1,21 @@
+@use "../abstracts";
+.contact {
+    padding: 54px 0 100px;
+    background: var(--bg-color-1);
+
+    &__form {
+        margin-top: 70px;
+    }
+
+    &__form-row {
+        flex-direction: row;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__submit-btn {
+        margin-top: 40px;
+    }
+}

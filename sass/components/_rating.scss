@@ -1,0 +1,11 @@
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        line-height: 1.66;
+    }
+}

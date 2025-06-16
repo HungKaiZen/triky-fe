@@ -1,0 +1,13 @@
+$scroll-max: 100;
+
+@mixin offer-slider() {
+  @for $i from 1 through $scroll-max {
+    #{$i + "%"} {
+      translate: #{$i * -1 + "%"};
+    }
+  }
+}
+
+@keyframes scroll-infinity {
+  @include offer-slider();
+}
