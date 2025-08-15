@@ -1,6 +1,7 @@
 const baseURL  = "https://triky-be.onrender.com";
 // const baseURL  = "http://localhost:8080";
 
+
 document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
