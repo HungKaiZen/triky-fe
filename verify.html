@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About | Circuit</title>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="./assets/favicon/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Animation -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+        <!-- Script -->
+        <script src="./assets/js/script.js"></script>
+    </head>
+</head>
+<body>
+    <header id="header" class="header"></header>
+    <script>
+        load("#header", "./templates/header.html");
+    </script>
+
+    <div class="verify_main" style="height: 62.5vh; background-color: #032e32;">
+        <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <div class="verify__content" style="padding: 60px; display: flex; justify-content: center; align-items: center; flex-direction: column; border-radius: 12px; background-color: #e0eae5;">
+                <h1 style="text-align: center; font-size: 32px;margin-bottom: 60px;">Xác thực Email</h1>
+
+                <form action="" id="verify-form" class="form">
+                    <div class="form__group">
+                        <label for="verify-token" class="form__label">Mã Xác Thực</label>
+                        <div class="form__group-horizontal form__group-horizontal-border">
+                        <input type="text" id="verify-token" placeholder="Nhập mã xác thực" class="form__group-input" style="width: 500px;">
+                        </div>
+                        <p class="form__error">Invalid email, please re-enter</p>
+                  </div>
+                  <button type="submit" class="btn auth__submit-btn" style="width: 140px; height: 52px;">Xác Thực</button>
+
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <footer id="footer" class="footer"></footer>
+    <script>
+        load("#footer", "./templates/footer.html");
+    </script>
+
+<script>
+    const baseURL  = "http://localhost:8080";
+
+    document.getElementById("verify-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const userData = {
+            token: document.getElementById("verify-token").value,
+        }
+
+        fetch(`${baseURL}/auth/verify-email`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => {
+            if(!response.ok) {
+                throw new Error("Xac thuc khong thanh cong");
+            }
+            return response.json();
+        })
+        .then(data => {
+            let userId = data.userId;
+            localStorage.setItem("verifiedUserId", userId);
+            alert(data.message)
+            window.location.href = "set-password.html";
+        })
+        .catch(() => {
+            alert("error")
+        });
+
+    })
+
+
+
+</script>
+
+</body>
+</html>

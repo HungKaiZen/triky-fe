@@ -37,6 +37,7 @@
 .user {
     position: relative;
     cursor: pointer;
+    visibility: hidden;
 
     @include abstracts.screen(md) {
         order: 3;

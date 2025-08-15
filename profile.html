@@ -40,6 +40,9 @@
       rel="stylesheet"
     />
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -56,7 +59,7 @@
     <main class="profile">
       <header id="header" class="header"></header>
       <script>
-        load("#header", "./templates/header.html");
+        load("#header", "./templates/header-logined.html");
       </script>
 
       <div class="profile__container">
@@ -65,11 +68,24 @@
             <div class="col-3 col-xl-4 col-lg-12">
               <div class="profile__sidebar">
                 <div class="profile__user">
-                  <img
-                    src="./assets/img/feedback/avatar-1.png"
-                    alt=""
-                    class="profile__user-avatar"
-                  />
+                  <span>
+                       
+                    <img
+                      src="http://localhost:8080/uploads/avatars/b8c262a0-748c-44fc-8349-ef8cfc78bfc1_FPT_Software_Logo.png"
+                      alt="avatar"
+                      class="profile__user-avatar"
+                      id="upload-avatar"
+                    />
+                  </span>
+                  <form id="avatarForm"  method="post" enctype="multipart/form-data">
+                      <div style="display: flex; gap: 8px; margin-top: 4px;  font-size: 10px;   color: #ccc;">
+                        <label for="avatarInput" class="action-avatar" style="background: #021602; padding: 4px 8px;border-radius: 4px;"><i class="fa-solid fa-camera"></i> <span>Avatar preview</span></label >
+                        
+                        <button type="submit" style="background: #021602; padding: 4px 8px;border-radius: 4px; color: #ccc;"><i class="fa-solid fa-upload"></i>Update avatar</button>
+                      </div>
+                      <input type="file" id="avatarInput" name="file" accept="image/*" style="display: none;">
+                  </form>
+                  
                   <h1 class="profile__user-name" id="fullName">Imran Khan</h1>
                   <p class="profile__user-desc">Registered: <span id="registered">17th May 2022</span></p>
                 </div>

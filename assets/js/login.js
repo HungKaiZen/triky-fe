@@ -1,32 +1,53 @@
-const baseURL  = "https://backend-serive-v1.onrender.com";
-fetch(`${baseURL}/auth/access`, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    username: username,
-    password: password,
-    platform: "WEB",
-    deviceToken: "string"
-  })
-})
-.then(response => {
-  if (!response.ok) {
-    return response.text().then(text => {
-      throw new Error(`Error ${response.status}: ${text}`);
+// const baseURL  = "https://backend-serive-v1.onrender.com";
+const baseURL  = "http://localhost:8080";
+
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    
+
+
+    fetch(`${baseURL}/auth/access`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            username: username,
+            password: password
+        })
+    })
+    .then(async response => {
+        const result = await response.json();
+
+        if (!response.ok) {
+            // Login thất bại → hiển thị message từ server
+            throw new Error(result.message || "Đăng nhập thất bại");
+        }
+
+        // Login thành công → trả data
+        return result.data;
+    })
+    .then(data => {
+        localStorage.setItem("accessToken", data.accessToken);
+        localStorage.setItem("refreshToken", data.refreshToken);
+        localStorage.setItem("userId", data.userId);
+        localStorage.setItem("avatarUrl", data.avatarUrl);
+        localStorage.setItem("fullName", data.fullName);
+        localStorage.setItem("username", data.username);
+        window.location.href = "index.html"; // chuyển trang tiếp theo
+    })
+    .catch(error => {
+        // Hiển thị lỗi cho người dùng
+        const errorElement = document.getElementById("error-msg");
+        errorElement.innerText = "Username or password in correct";
+        errorElement.style.display = "block";
     });
-  }
-  return response.json();
-})
-.then(data => {
-  const token = data.data.accessToken;
-  const userId = data.data.userId;
-  localStorage.setItem("token", token);
-  localStorage.setItem("userId", userId);
-  window.location.href = "index-logined.html";
-  console.log('Đăng nhập thành công:', data);
-})
-.catch(error => {
-  alert(error.message);
 });
+
+
+

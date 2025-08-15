@@ -2465,6 +2465,7 @@ a {
 .user {
   position: relative;
   cursor: pointer;
+  visibility: hidden;
 }
 @media (max-width: 767.8px) {
   .user {

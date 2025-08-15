@@ -20,10 +20,94 @@
         </li>
       </ul>
     </nav>
-    <div class="navbar__act d-md-none">
-      <a href="./login.html" class="navbar__act-link">Đăng Nhập</a>
-      <a href="./signup.html" class="btn navbar__act-btn">Đăng Ký</a>
+
+    <div class="navbar__act"> 
+      <a href="./login.html" class="navbar__act-link" id="login-btn">Đăng Nhập</a>
+      <a href="./signup.html" class="btn navbar__act-btn" id="register-btn">Đăng Ký</a>
     </div>
+    
+
+    <div class="user" id="avatar">
+      <img src="" alt="avatar" class="user__avatar" id="user-avatar"/>
+
+      <div class="user__dropdown">
+        <div class="user__dropdown-inner">
+          <div class="user__info">
+            <img
+              src="./assets/img/users/user-1.avif"
+              alt=""
+              class="user__avatar"
+            />
+            <div>
+              <p class="user__info-name" id="user__info-fullName">Tim Southee</p>
+              <p class="user__info-user-name" id="user__info-username">@timsouthee</p>
+            </div>
+          </div>
+          <ul class="user__dropdown-list">
+            <li class="user__dropdown-item">
+              <a href="./profile.html" id="profile-link">
+                <img src="./assets/icon/user.svg" alt="" />
+                Profile
+              </a>
+            </li>
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/heart.svg" alt="" />
+                Favorite
+              </a>
+            </li>
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/history.svg" alt="" />
+                History
+              </a>
+            </li>
+          </ul>
+
+          <ul class="user__dropdown-list">
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/setting.svg" alt="" />
+                Setting
+              </a>
+            </li>
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/security.svg" alt="" />
+                Security
+              </a>
+            </li>
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/password.svg" alt="" />
+                Change Password
+              </a>
+            </li>
+          </ul>
+
+          <ul class="user__dropdown-list">
+            <li class="user__dropdown-item">
+              <a href="#!">
+                <img src="./assets/icon/mode.svg" alt="" />
+                Dark Mode
+              </a>
+            </li>
+            <li class="user__dropdown-item">
+              <!-- <a href="./index.html" >
+                <img src="./assets/icon/logout.svg" alt="" />
+                <button id="logout-btn">Log out</button>
+                
+              </a> -->
+              <button id="logout-btn" style="display: flex; align-items: center; border: none; background: none; cursor: pointer;">
+                <img src="./assets/icon/logout.svg" alt="Logout icon" style="margin-right: 8px;" />
+                Log out
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <a href="#!" class="menu-icon d-none d-md-block">
       <img src="./assets/icon/menu-icon.svg" alt="" />
     </a>

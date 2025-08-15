@@ -1,16 +1,22 @@
-const baseURL  = "https://backend-serive-v1.onrender.com";
+// const baseURL  = "https://backend-serive-v1.onrender.com";
+const baseURL  = "http://localhost:8080";
+
 document.getElementById("registerForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     // Lấy dữ liệu từ các input
+    let uiBirthday =  document.getElementById("dateOfBirth").value;
+    let date = new Date(uiBirthday);
+    let dtoBirthday = date.toLocaleDateString("en-GB");
     const userData = {
-        fullName: document.getElementById("fullName").value,
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
         gender: document.getElementById("gender").value,
-        dateOfBirth: document.getElementById("dateOfBirth").value,
+        birthday: dtoBirthday,
         email: document.getElementById("email").value,
-        phoneNumber: document.getElementById("phoneNumber").value,
+        phone: document.getElementById("phoneNumber").value,
         username: document.getElementById("username").value,
-        password: document.getElementById("password").value,
+        
         addresses: [
             {
                 apartmentNumber: document.getElementById("apartmentNumber").value,
@@ -40,8 +46,7 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
         return response.json();
     })
     .then(data => {
-        alert("Đăng ký thành công! Mời bạn đăng nhập.");
-        window.location.href = "login.html";  // điều hướng về trang đăng nhập
+        window.location.href = "verify-set-password.html";
     })
     .catch(error => {
         alert(error.message);

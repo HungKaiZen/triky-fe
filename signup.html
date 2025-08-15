@@ -54,8 +54,8 @@
     </head>
     <body>
         <main class="signup">
-            <div class="auth">
-                <div class="row row-cols-2 row-cols-lg-1">
+            <div class="auth" style="height: 100vh;">
+                <div class="row row-cols-2 row-cols-lg-1" style="height: inherit;">
                     <div class="col">
                         <div class="auth__intro">
                             <a href="/" class="logo auth__intro-logo">
@@ -98,22 +98,43 @@
 
                                     <div class="form__group">
                                         <label for="" class="form__label"
-                                            >fullName</label
+                                            >FirstName</label
                                         >
                                         <div
                                             class="form__group-horizontal form__group-horizontal-border"
                                         >
                                             <input
                                                 type="text"
-                                                placeholder="FullName"
-                                                id="fullName"
+                                                placeholder="FirstName"
+                                                id="firstName"
                                                 class="form__group-input"
                                             />
                                         </div>
                                         <p class="form__error">
-                                            Invalid email, please re-enter
+                                            Invalid firstName, please re-enter
                                         </p>
                                     </div>
+
+
+                                    <div class="form__group">
+                                        <label for="" class="form__label"
+                                            >LastName</label
+                                        >
+                                        <div
+                                            class="form__group-horizontal form__group-horizontal-border"
+                                        >
+                                            <input
+                                                type="text"
+                                                placeholder="LastName"
+                                                id="lastName"
+                                                class="form__group-input"
+                                            />
+                                        </div>
+                                        <p class="form__error">
+                                            Invalid lastName, please re-enter
+                                        </p>
+                                    </div>
+
                                     <div class="form__group">
                                         <label for="" class="form__label">Gender</label
                                         >
@@ -206,45 +227,6 @@
                                         </div>
                                         <p class="form__error">
                                             Invalid email, please re-enter
-                                        </p>
-                                    </div>
-                                    <div class="form__group">
-                                        <label for="" class="form__label">
-                                            Password
-                                        </label>
-                                        <div
-                                            class="form__group-horizontal form__group-horizontal-border"
-                                        >
-                                            <input
-                                                type="password"
-                                                placeholder="Password"
-                                                minlength="6"
-                                                id="password"
-                                                class="form__group-input"
-                                            />
-                                        </div>
-
-                                        <p class="form__error">
-                                            Invalid password, please re-enter
-                                        </p>
-                                    </div>
-                                    <div class="form__group">
-                                        <label for="" class="form__label">
-                                            Confirm Password
-                                        </label>
-                                        <div
-                                            class="form__group-horizontal form__group-horizontal-border"
-                                        >
-                                            <input
-                                                type="password"
-                                                id="confirmPassword"
-                                                placeholder="Confirm Password"
-                                                minlength="6"
-                                                class="form__group-input"
-                                            />
-                                        </div>
-                                        <p class="form__error">
-                                            Invalid password, please re-enter
                                         </p>
                                     </div>
                                     <div class="form__group">
