@@ -1,5 +1,5 @@
-// const baseURL  = "https://triky-be.onrender.com";
-const baseURL  = "http://localhost:8080";
+const baseURL  = "https://triky-be.onrender.com";
+// const baseURL  = "http://localhost:8080";
 
 
 document.getElementById("loginForm").addEventListener("submit", function(e) {
