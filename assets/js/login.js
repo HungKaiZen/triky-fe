@@ -1,4 +1,4 @@
-const baseURL  = "https://backend-serive-v1.onrender.com";
+const baseURL  = "https://triky-be.onrender.com";
 // const baseURL  = "http://localhost:8080";
 
 
