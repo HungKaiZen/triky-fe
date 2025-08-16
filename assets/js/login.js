@@ -8,9 +8,6 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    
-
-
     fetch(`${baseURL}/auth/access`, {
         method: "POST",
         headers: {
@@ -48,6 +45,3 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         errorElement.style.display = "block";
     });
 });
-
-
-
