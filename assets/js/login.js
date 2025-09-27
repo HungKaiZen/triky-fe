@@ -1,5 +1,5 @@
-const baseURL  = "https://triky-be.onrender.com";
-// const baseURL  = "http://localhost:8080";
+// const baseURL  = "https://triky-be.onrender.com";
+const baseURL  = "http://localhost:8080";
 
 
 document.getElementById("loginForm").addEventListener("submit", function(e) {
@@ -31,9 +31,8 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
     })
     .then(data => {
         localStorage.setItem("accessToken", data.accessToken);
-        localStorage.setItem("refreshToken", data.refreshToken);
         localStorage.setItem("userId", data.userId);
-        localStorage.setItem("avatarUrl", data.avatarUrl);
+        localStorage.setItem("avatarUrl", baseURL + data.avatarUrl);
         localStorage.setItem("fullName", data.fullName);
         localStorage.setItem("username", data.username);
         window.location.href = "index.html"; // chuyển trang tiếp theo

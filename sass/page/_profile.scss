@@ -1,3 +1,4 @@
+@use "../abstracts";
 .profile {
     background: var(--bg-color-1);
 
@@ -25,7 +26,8 @@
             url(../../assets/img/profile/cover.png) no-repeat center / cover;
 
         &-avatar {
-            width: 116px;
+            width: 140px;
+            height: 140px;
             margin-top: 40px;
             border-radius: 50%;
             border: 5px solid rgba(255, 255, 255, 0.2);
@@ -174,3 +176,194 @@
         line-height: 1.5;
     }
 }
+
+
+.avatar__modal {
+    position: fixed;
+    z-index: 2;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    
+    &.avatar__modal.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.avatar__modal.active .avatar__modal-content {
+        transform: scale(1);
+    }
+
+    &-overlay {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 750px;
+        height: 750px;
+        padding: 24px;
+        background-color: #fff;
+        box-shadow: 1px 1px rgba($color: #000000, $alpha: 0.2);
+        border-radius: 12px;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+
+        @include abstracts.screen(sm) {
+            height: 650px;
+        }
+    }
+    
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &-title {
+        font-size: 24px;
+    }
+
+    &-close {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        background-color: #ececec;
+        font-size: 24px;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #333;
+        &:hover {
+            background-color: #dadada;
+        }
+    }
+
+    &-body {
+        flex: 1;
+    }
+
+    &-action {
+        padding-top: 24px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    &-upload-btn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        height: 40px;
+        background-color: #e0eae5;
+        border-radius: 6px;
+        color: #032e32;
+        font-weight: 600;
+
+        &:hover {
+            background-color: #cad9d2;
+        }
+    }
+
+    &-avatar-frame {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        height: 40px;
+        background-color: #ebf5ff;
+        border-radius: 6px;
+        color: #2e80da;
+        font-weight: 600;
+        &:hover {
+            background-color: #d8e6f5;
+        }
+    }
+
+    &-uploaded {
+        padding-top: 24px;
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            row-gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+    }
+
+    &-uploaded-img {
+        max-width: 130px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: transform 0.2s, border 0.2s;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &.selected {
+            border: 3px solid #2e80da;
+            transform: scale(1.1);
+        }
+
+        @include abstracts.screen(sm) {
+            max-width: 80px;
+        }
+    }
+}
+
+
+.see-more-btn {
+    display: block;
+    width: 180px;
+    height: 40px;
+    margin: 24px auto 0;
+    color: #333;
+    border-radius: 4px;
+    background-color:#e7e7e7;
+    font-weight: 600;
+    &:hover {
+        color: #000000;
+        background-color: #ccc;
+    }
+}
+
+#confirmAvatarBtn {
+    width: 100%;
+    height: 42px;
+    margin-top: 16px;
+    color: #fff;
+    border-radius: 4px;
+    background-color:#0f5258;
+    font-weight: 600;
+    &:hover {
+        color: #fff;
+        background-color: #02353a;
+    }
+}
+
+// #e0eae5

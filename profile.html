@@ -43,6 +43,23 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+      .avatar-img {
+        position: relative;
+      }
+
+      #update-avatar {
+        position: absolute;
+        top: 70%;
+        right: -12px;
+        border-radius: 50%;
+        padding: 4px;
+        border: 1px solid rgba(237, 237, 246, 0.2);
+        background-color: rgba(237, 237, 246, 0.2);
+
+      }
+
+    </style>
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -59,7 +76,7 @@
     <main class="profile">
       <header id="header" class="header"></header>
       <script>
-        load("#header", "./templates/header-logined.html");
+        load("#header", "./templates/header.html");
       </script>
 
       <div class="profile__container">
@@ -68,23 +85,63 @@
             <div class="col-3 col-xl-4 col-lg-12">
               <div class="profile__sidebar">
                 <div class="profile__user">
-                  <span>
-                       
+                  <span class="avatar-img">
                     <img
                       src="http://localhost:8080/uploads/avatars/b8c262a0-748c-44fc-8349-ef8cfc78bfc1_FPT_Software_Logo.png"
                       alt="avatar"
                       class="profile__user-avatar"
                       id="upload-avatar"
                     />
+                    <span id="update-avatar">
+                      <button type="button" ><i class="fa-solid fa-camera" style="color: #032e32;"></i></button>
+                      <input type="file" id="avatarInput" accept="image/*" style="display:none;">
+                    </span>
                   </span>
-                  <form id="avatarForm"  method="post" enctype="multipart/form-data">
-                      <div style="display: flex; gap: 8px; margin-top: 4px;  font-size: 10px;   color: #ccc;">
-                        <label for="avatarInput" class="action-avatar" style="background: #021602; padding: 4px 8px;border-radius: 4px;"><i class="fa-solid fa-camera"></i> <span>Avatar preview</span></label >
-                        
-                        <button type="submit" style="background: #021602; padding: 4px 8px;border-radius: 4px; color: #ccc;"><i class="fa-solid fa-upload"></i>Update avatar</button>
-                      </div>
-                      <input type="file" id="avatarInput" name="file" accept="image/*" style="display: none;">
-                  </form>
+                  <div class="avatar__modal" id="avatar-modal">
+                    <div class="avatar__modal-overlay">
+                        <div class="container" style="display: flex; justify-content: center;">
+                          <div class="avatar__modal-content">
+                          <div class="avatar__modal-header">
+                            <h3 class="avatar__modal-title">Chọn ảnh đại diện</h3>
+                            <span class="avatar__modal-close">
+                              <i class="fa-solid fa-xmark"></i>
+                            </span>
+                          </div>
+                          <div class="avatar__modal-body">
+                            <div class="avatar__modal-action">
+                              <button class="avatar__modal-upload-btn" id="uploadBtn">
+                                <i class="fa-solid fa-plus"></i>
+                                Tải ảnh lên
+                              </button>
+                              <button class="avatar__modal-avatar-frame">
+                                <i class="fa-regular fa-id-badge"></i>
+                                Thêm khung</button>
+                            </div>
+                            <div class="avatar__modal-uploaded">
+                              <h4 style="font-weight: 600;">Ảnh đã tải lên</h4>
+                              <div class="avatar__modal-uploaded-list">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                                <img src="./assets/img/users/user-1.avif" alt="" class="avatar__modal-uploaded-img">
+                              </div>
+                              <button class="button see-more-btn">Xem thêm</button>
+                            </div>
+                          </div>
+
+                          <div class="avatar__modal-footer" style="margin-top: 40px; padding-top: 40px;">
+                            <!-- Nút cập nhật avatar -->
+                            <button id="confirmAvatarBtn" class="button" >
+                              Cập nhật avatar
+                            </button>
+                            
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
                   
                   <h1 class="profile__user-name" id="fullName">Imran Khan</h1>
                   <p class="profile__user-desc">Registered: <span id="registered">17th May 2022</span></p>
