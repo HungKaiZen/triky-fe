@@ -62,7 +62,11 @@
                 .auth__row {
                     height: auto;
                     /* overflow: inherit; */
-                } 
+                }
+
+                .auth__content {
+                    height: auto;
+                }
             }
         </style>
     </head>
@@ -99,9 +103,9 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col slider-smooth" id="right-slider-js">
-                        <div id="auth__content" class="auth__content">
-                            <div class="auth__content-block">
+                    <div class="col slider-smooth" id="right-slider-js" style=" height: initial">
+                        <div id="auth__content" class="auth__content" style="height: 100vh; " >
+                            <div class="auth__content-block" style="overflow-y: auto;">
                                 <button class="auth__close-btn" onclick="backLoginIntro()">
                                     <img
                                         src="./assets/icon/close.svg"
