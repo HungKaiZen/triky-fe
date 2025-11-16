@@ -24,14 +24,14 @@
       </ul>
     </nav>
 
-    <div class="navbar__act"> 
+    <div class="navbar__act" id="navbarAction"> 
       <a href="./login.html" class="navbar__act-link" id="login-btn">Đăng Nhập</a>
       <a href="./signup.html" class="btn navbar__act-btn d-md-none" id="register-btn">Đăng Ký</a>
     </div>
     
 
     <div class="user" id="avatar">
-      <img src="" alt="avatar" class="user__avatar" id="user-avatar"/>
+      <img src="" alt="avatar" class="user__avatar avatar-img" id="user-avatar"/>
 
       <div class="user__dropdown">
         <div class="user__dropdown-inner">
@@ -39,7 +39,7 @@
             <img
               src="./assets/img/users/user-1.avif"
               alt=""
-              class="user__avatar"
+              class="user__avatar avatar-img"
             />
             <div>
               <p class="user__info-name" id="user__info-fullName">Tim Southee</p>
@@ -81,7 +81,7 @@
               </a>
             </li>
             <li class="user__dropdown-item">
-              <a href="#!">
+              <a href="#!" id="open-change-password-btn">
                 <img src="./assets/icon/password.svg" alt="" />
                 Change Password
               </a>

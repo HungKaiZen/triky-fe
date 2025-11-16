@@ -1,0 +1,28 @@
+<div class="popup__wrapper">
+    <div class="popup__overlay">
+        <!-- <div class="container"></div> -->
+        <div class="popup__container">
+            <div class="popup__header">
+                <h3 class="popup__header-title">Change email address</h3>
+                <span class="popup__close-btn" id="popup__close-btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+            </div>
+            <div class="separate popup__separate"></div>
+            <div class="popup__body">
+                <form id="updateForm">
+                    <div class="form__group">
+                        <label for="emailInput" class="form__label">Email address</label>
+                    <div class="form__group-horizontal form__group-horizontal-border">
+                      <input type="email" placeholder="Enter your email" id="emailInput" class="form__group-input" required/>
+                    </div>
+                        <p class="form__error" id="form__error">Invalid email, please re-enter</p>
+                    </div>
+                    <button type="submit" class="popup__submit-btn popup__mt">Submit</button>
+                </form>
+            </div>
+            <!-- <div class="popup__footer">
+            </div> -->
+        </div>
+    </div>
+</div>

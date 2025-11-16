@@ -50,6 +50,6 @@ document.getElementById("registerForm").addEventListener("submit", function(e) {
         window.location.href = "verify-set-password.html";
     })
     .catch(error => {
-        alert(error.message);
+        alert(error.message + "error");
     });
 });

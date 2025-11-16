@@ -33,6 +33,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         localStorage.setItem("accessToken", data.accessToken);
         localStorage.setItem("userId", data.userId);
         localStorage.setItem("avatarUrl", baseURL + data.avatarUrl);
+        console.log(baseURL + data.avatarUrl)
         localStorage.setItem("fullName", data.fullName);
         localStorage.setItem("username", data.username);
         window.location.href = "index.html"; // chuyển trang tiếp theo

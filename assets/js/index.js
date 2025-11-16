@@ -28,12 +28,10 @@ window.addEventListener("load", () => {
     // Lấy avatar từ localStorage hoặc gọi API
     const avatarUrl = localStorage.getItem("avatarUrl");
     if (avatarUrl) {
-      // const img = document.getElementById("user-avatar");
-      const imgs = document.getElementsByClassName("user__avatar");
-      for(let img of imgs) {
-        img.src=avatarUrl;
+      const userAvatars = document.getElementsByClassName("user__avatar");
+      for(const avatar of userAvatars) {
+          avatar.src = avatarUrl;
       }
-      // img.src = avatarUrl;
     }
 
     document.getElementById("logout-btn").onclick = () => {
