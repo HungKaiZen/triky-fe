@@ -1,4 +1,4 @@
-const baseURL  = "http://localhost:8080";
+// const baseURL  = "http://localhost:8080";
 // Khi trang được load
 window.addEventListener("load", () => {
   const accessToken = localStorage.getItem("accessToken");
