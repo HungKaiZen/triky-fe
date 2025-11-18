@@ -52,9 +52,9 @@ form.addEventListener("submit", (e) => {
     if(!response) {
       throw new Error(result.data || "Server error");
     }
-    password.value = "";
-    confirmPassword.value = "";
-    return result;
+      password.value = "";
+      confirmPassword.value = "";
+      return result;
     })
     .then(result => {
       console.log(result)

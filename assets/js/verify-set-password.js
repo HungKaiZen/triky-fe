@@ -1,6 +1,4 @@
-
-const baseURL  = "https://triky-be.onrender.com";
-// const baseURL = "http://localhost:8080";
+import { baseURL } from './baseConfig.js';
 document.getElementById("setPassword").addEventListener("submit", function(event) {
 event.preventDefault()
 let password = document.getElementById("password").value

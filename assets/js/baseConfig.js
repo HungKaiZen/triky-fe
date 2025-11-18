@@ -1,8 +1,9 @@
 
-export const baseURL = window.location.hostname.includes("localhost")
-    ? "http://localhost:8080"
-    : "https://triky-be.onrender.com";
+// export const baseURL = window.location.hostname.includes("localhost")
+//     ? "http://localhost:8080"
+//     : "https://triky-be.onrender.com";
 // export const baseURL = "http://localhost:8080";
+export const baseURL = "https://triky-be.onrender.com";
 
 export async function load(selector, filePath) {
     const res = await fetch(filePath);

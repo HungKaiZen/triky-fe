@@ -1,6 +1,3 @@
-// const baseURL  = "https://triky-be.onrender.com";
-// const baseURL  = "http://localhost:8080";
-
 import { baseURL } from './baseConfig.js';
 
 const openPopupBtn = document.getElementById("open-change-phone-btn");
@@ -35,9 +32,6 @@ formSubmit.addEventListener("submit", (e) => {
         phoneNumberError.innerText = "Invalid phone number, please re-enter";
         return;
     }
-
-    alert(accessToken)
-    alert(phoneNumberInput.value)
 
     fetch(`${baseURL}/auth/change-phone`, {
         method: "PUT",

@@ -1,5 +1,3 @@
-// const baseURL  = "https://triky-be.onrender.com";
-// const baseURL = "http://localhost:8080";
 import { baseURL } from './baseConfig.js';
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,8 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const accessToken = localStorage.getItem("accessToken");
     const fullName = localStorage.getItem("fullName");
     const username = localStorage.getItem("username");
-    console.log("userId:", userId);
-    console.log("accessToken:", accessToken);
 
     const logoutBtn = document.getElementById("logout-btn");
 

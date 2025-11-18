@@ -1,7 +1,5 @@
-// const baseURL  = "https://triky-be.onrender.com";
-// const baseURL  = "http://localhost:8080";
-
 import { baseURL } from './baseConfig.js';
+
 
 const popupBtn = document.getElementById("open-change-email-btn");
 const popupCloseBtn = document.getElementById("change-email__close-btn");
